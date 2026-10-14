@@ -19,7 +19,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="mt-4 inline-block font-mono text-sm text-primary underline-offset-4 hover:underline"
             >
-              discord.gg/4wCmSsxxA2
+              https://discord.gg/4wCmSsxxA2
             </a>
           </div>
           <div>

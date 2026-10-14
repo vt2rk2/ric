@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: 'RichBoyZ — We Protect. We Build. We Secure.',
   description:
     'RichBoyZ is a crew of programmers protecting people from blackmail, keeping Discord communities fair, and building and securing websites.',
-  generator: 'v0.app',
   icons: {
     icon: [
       { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },

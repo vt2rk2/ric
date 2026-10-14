@@ -8,7 +8,7 @@ const BOOT_LINES = [
   '> initializing richboyz.sys ...',
   '> loading kernel modules [shield, firewall, trace]',
   '> establishing encrypted tunnel ... OK',
-  '> verifying crew signatures: Ghostly / m3qab / Lie / Try / Nhjk / Oxygen',
+  '> verifying crew signatures: Ghostly / m3qab / Lie / Try / Nhjk / Alb8mi',
   '> scanning for blackmail threats ... 0 active',
   '> anthem queued: Massive Attack - Angel',
   '> access granted. welcome.',
