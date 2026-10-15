@@ -19,7 +19,7 @@ export function SiteFooter() {
               rel="noreferrer"
               className="mt-4 inline-block font-mono text-sm text-primary underline-offset-4 hover:underline"
             >
-              https://discord.gg/4wCmSsxxA2
+              discord.gg/4wCmSsxxA2
             </a>
           </div>
           <div>
@@ -33,7 +33,7 @@ export function SiteFooter() {
       </div>
 
       <p
-        className="mt-20 select-none whitespace-nowrap text-center text-[22vw] font-bold leading-[0.75] tracking-tighter text-foreground/[0.06]"
+        className="mt-20 select-none whitespace-nowrap text-center text-[22vw] font-bold leading-[0.75] tracking-tighter text-foreground/[0.4]"
         aria-hidden="true"
       >
         RichBoyZ

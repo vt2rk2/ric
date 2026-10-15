@@ -112,6 +112,38 @@ body.is-loading {
   background-size: 48px 48px;
 }
 
+.hero-orbit {
+  position: relative;
+  display: flex;
+  width: min(38vw, 34rem);
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}
+.hero-orbit__core {
+  width: 34%;
+  aspect-ratio: 1;
+  border: 1px solid oklch(1 0 0 / 35%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, oklch(0.6 0.24 27 / 70%), oklch(0.11 0 0) 70%);
+  box-shadow: 0 0 90px oklch(0.6 0.24 27 / 30%);
+}
+.hero-orbit__ring {
+  position: absolute;
+  inset: 12%;
+  border: 1px solid oklch(1 0 0 / 20%);
+  border-radius: 50%;
+  transform: rotateX(68deg) rotateZ(-25deg);
+}
+.hero-orbit__ring--outer {
+  border-color: oklch(0.6 0.24 27 / 60%);
+  transform: rotateX(68deg) rotateZ(25deg);
+}
+.hero-orbit__ring--inner {
+  inset: 24%;
+  border-color: oklch(1 0 0 / 30%);
+}
+
 .scanlines {
   pointer-events: none;
   background: repeating-linear-gradient(
@@ -190,9 +222,11 @@ body.is-loading {
 }
 
 .reveal {
+  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal.is-observing:not(.is-visible) {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .reveal.is-visible {
   opacity: 1;
@@ -205,5 +239,5 @@ body.is-loading {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal { opacity: 1; transform: none; }
+  .reveal.is-observing:not(.is-visible) { opacity: 1; transform: none; }
 }

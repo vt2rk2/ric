@@ -1,17 +1,18 @@
 'use client'
 
-import dynamic from 'next/dynamic'
 import { ArrowDown } from 'lucide-react'
 import { ScrambleText } from './scramble-text'
-
-const HeroScene = dynamic(() => import('./hero-scene'), { ssr: false })
 
 export function Hero() {
   return (
     <section id="top" className="relative flex min-h-svh items-center overflow-hidden pt-16">
       <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" aria-hidden="true" />
-      <div className="absolute inset-0 md:left-1/3" aria-hidden="true">
-        <HeroScene />
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-2/3 items-center justify-center overflow-hidden md:flex" aria-hidden="true">
+        <div className="hero-orbit">
+          <span className="hero-orbit__core" />
+          <span className="hero-orbit__ring hero-orbit__ring--outer" />
+          <span className="hero-orbit__ring hero-orbit__ring--inner" />
+        </div>
       </div>
       <div className="scanlines absolute inset-0" aria-hidden="true" />
 
@@ -36,7 +37,7 @@ export function Hero() {
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
             href="#crew"
-            className="group relative overflow-hidden bg-primary px-6 py-3 font-mono text-sm uppercase tracking-widest text-primary-foreground"
+            className="group relative overflow-hidden bg-[#e60017] px-6 py-3 font-mono text-sm uppercase tracking-widest text-primary-foreground"
           >
             <span className="relative z-10">Meet the crew</span>
             <span className="absolute inset-0 -translate-x-full bg-foreground transition-transform duration-300 group-hover:translate-x-0" aria-hidden="true" />

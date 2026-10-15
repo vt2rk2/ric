@@ -16,7 +16,8 @@ export function Reveal({
 
   useEffect(() => {
     const el = ref.current
-    if (!el) return
+    if (!el || !('IntersectionObserver' in window)) return
+    el.classList.add('is-observing')
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

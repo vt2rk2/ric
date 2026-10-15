@@ -66,18 +66,6 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     if (audioRef.current) audioRef.current.muted = muted
   }, [muted])
 
-  useEffect(() => {
-    const resume = () => {
-      if (audioRef.current?.paused && !audioRef.current.dataset.userPaused) start()
-    }
-    window.addEventListener('pointerdown', resume, { once: true })
-    window.addEventListener('keydown', resume, { once: true })
-    return () => {
-      window.removeEventListener('pointerdown', resume)
-      window.removeEventListener('keydown', resume)
-    }
-  }, [start])
-
   const value = useMemo(
     () => ({ playing, volume, muted, currentTime, duration, start, toggle, setVolume, stepVolume, toggleMute }),
     [playing, volume, muted, currentTime, duration, start, toggle, setVolume, stepVolume, toggleMute],
@@ -90,7 +78,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
         ref={audioRef}
         src="/audio/angel.mp3"
         loop
-        preload="auto"
+        preload="none"
         onPlay={(e) => {
           delete e.currentTarget.dataset.userPaused
           setPlaying(true)

@@ -137,7 +137,7 @@ export function Terminal() {
             <p
               key={i}
               className={
-                line.kind === 'in' ? 'text-foreground' : line.kind === 'accent' ? 'text-primary' : 'whitespace-pre text-muted-foreground'
+                line.kind === 'in' ? 'text-foreground' : line.kind === 'accent' ? 'text-[#ff4555]' : 'whitespace-pre text-muted-foreground'
               }
             >
               {line.kind === 'in' && <span className="text-primary">{'❯ '}</span>}
@@ -145,7 +145,7 @@ export function Terminal() {
             </p>
           ))}
           <div className="flex items-center">
-            <span className="text-primary">{'❯ '}</span>
+            <span className="text-[#ff4555]">{'❯ '}</span>
             <label htmlFor="terminal-input" className="sr-only">
               Terminal command
             </label>

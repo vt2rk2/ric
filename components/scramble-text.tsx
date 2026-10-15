@@ -48,8 +48,9 @@ export function ScrambleText({
   }, [run, delay])
 
   return (
-    <span className={className} onMouseEnter={scrambleOnHover ? run : undefined} aria-label={text}>
+    <span className={className} onMouseEnter={scrambleOnHover ? run : undefined}>
       <span aria-hidden="true">{output}</span>
+      <span className="sr-only">{text}</span>
     </span>
   )
 }

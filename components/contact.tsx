@@ -25,7 +25,7 @@ export function Contact() {
                 Discord invite
               </p>
               <p className="mt-3 break-all font-sans text-4xl font-bold tracking-tight transition-colors group-hover:text-primary-foreground md:text-6xl">
-                discord.gg/https://discord.gg/4wCmSsxxA2
+                discord.gg/4wCmSsxxA2
               </p>
             </div>
             <span className="inline-flex size-16 shrink-0 items-center justify-center border border-primary text-primary transition-all group-hover:rotate-45 group-hover:border-primary-foreground group-hover:text-primary-foreground">
