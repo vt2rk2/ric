@@ -30,4 +30,5 @@ export const members: CrewMember[] = [
   { name: 'Try', discord: 'vixst', role: 'Operator', specialty: 'Web Development', code: 'RBZ-02', pfp: '/pfp/try.webp' },
   { name: 'Nhjk', discord: '6f4i', role: 'Operator', specialty: 'Security Audits', code: 'RBZ-03', pfp: '/pfp/nhjk.webp' },
   { name: 'Alb8mi', discord: 'covenile', role: 'Operator', specialty: 'Strategy & Planning', code: 'RBZ-04', pfp: '/pfp/Alb8mi.webp' },
+  { name: 'undelusion', discord: '_sex', role: 'Business Partner', specialty: 'He Knows Too Much!!', code: 'RBZ-05', pfp: '/pfp/_sex.webp' },
 ]
