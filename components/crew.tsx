@@ -73,10 +73,21 @@ export function Crew() {
                 </span>
                 <div className="relative flex items-start justify-between gap-4">
                   <Avatar name={person.name} pfp={person.pfp} large />
-                  <span className="flex items-center gap-2 bg-primary px-3 py-1 font-mono text-xs uppercase tracking-widest text-primary-foreground [transform:translateZ(20px)]">
-                    <person.icon className="size-3.5" aria-hidden="true" />
-                    {person.role}
-                  </span>
+                  <div className="flex flex-col items-end gap-2 [transform:translateZ(20px)]">
+                    <span className="flex items-center gap-2 bg-primary px-3 py-1 font-mono text-xs uppercase tracking-widest text-primary-foreground">
+                      <person.icon className="size-3.5" aria-hidden="true" />
+                      {person.role}
+                    </span>
+                    {'status' in person && (
+                      <span className="flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+                        <span
+                          className={`size-1.5 rounded-full ${person.status === 'Online' ? 'animate-pulse bg-primary' : 'bg-muted-foreground'}`}
+                          aria-hidden="true"
+                        />
+                        {person.status}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <h3 className="relative mt-8 text-4xl font-bold tracking-tighter sm:text-5xl [transform:translateZ(30px)]">
                   {person.name}

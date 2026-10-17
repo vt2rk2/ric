@@ -14,15 +14,17 @@ export const founder = {
   discord: '.vt2',
   pfp: '/pfp/ghostly.jpg' as string | undefined,
   role: 'Founder & Leader',
+  status: 'Online',
   bio: 'The one who started it all. Ghostly founded RichBoyZ on one rule: nobody gets blackmailed on our watch. Moves in silence, leads from the front.',
 }
 
 export const vision = {
   name: 'm3qab',
   discord: 'richspot',
-    pfp: '/pfp/m3qab.webp' as string | undefined,
+  pfp: '/pfp/m3qab.webp' as string | undefined,
   role: 'The Vision',
-  bio: 'The mind behind the mission. m3qab sees where RichBoyZ is headed and shapes every move the crew makes to get there.',
+  status: 'Offline',
+  bio: 'RichBoyZ m3qab, a legend. Off the net, but never forgotten.',
 }
 
 export const members: CrewMember[] = [
